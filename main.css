@@ -1,0 +1,204 @@
+:root {
+  --white: rgb(245, 245, 245);
+  --orange: rgb(240, 145, 21);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(32, 32, 32);
+}
+
+main {
+  padding: 1em 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bullet {
+  background-color: var(--white);
+  width: 5px;
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: -5px;
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: var(--orange);
+}
+
+.btn {
+  width: 100%;
+  max-width: 400px;
+  text-decoration: none;
+}
+
+.btn:hover .github-btn {
+  opacity: 50%;
+}
+
+.github-btn {
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: var(--orange);
+  gap: 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+}
+
+.github-btn div {
+  width: 30px;
+}
+
+.github-btn div img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.github-btn p {
+  color: black;
+  font-weight: bold;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  font-size: 1.4rem;
+}
+
+.container {
+  padding: 0 1em;
+}
+
+.max-view {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: reveal 2s ease;
+}
+
+.skills {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50px 50px 50px 50px;
+  gap: 50px;
+  place-items: center;
+  place-content: center;
+  margin-top: 50px;
+}
+
+.skills img {
+  width: 50px;
+  height: 50px;
+
+  object-fit: cover;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.developer {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  display: block;
+  border-radius: 10px;
+}
+h2 span {
+  color: var(--orange);
+}
+
+.sub {
+  text-align: center;
+  margin-top: 10px;
+  color: lightgray;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0;
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 100%;
+  }
+}
+
+.about-me span {
+  color: var(--orange);
+}
+
+.learn-title {
+  margin-bottom: 30px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.355);
+  border-radius: 3px;
+  padding: 1em;
+  margin-bottom: 10px;
+  cursor: pointer;
+  height: 60px;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.dropdown:hover {
+  height: 200px;
+}
+
+.dropdown:hover .reveal {
+  opacity: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.dt {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reveal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 425px) {
+  .container {
+    padding: 0 2em;
+  }
+}
